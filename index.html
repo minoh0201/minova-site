@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minova Group LLC</title>
+<meta name="description" content="Minova Group LLC develops evidence-based dietary supplements and personal care products for U.S. consumers, sold on Amazon.com under the Minova brand.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231c4b3f'/%3E%3Cpath d='M8 23V9l8 9 8-9v14' fill='none' stroke='%23fff' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --ink: #17201d; --muted: #5b6662; --line: #e3e6e2; --bg: #ffffff; --soft: #f4f6f3;
+    --brand: #1c4b3f; --brand-ink: #ffffff; --accent: #b08d57;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  a { color: var(--brand); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.94); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); }
+  .bar { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-weight: 700; letter-spacing: .02em; }
+  .logo svg { width: 28px; height: 28px; }
+  .logo small { font-weight: 500; color: var(--muted); letter-spacing: 0; }
+  nav a { color: var(--muted); text-decoration: none; font-size: .95rem; margin-left: 24px; }
+  nav a:hover { color: var(--ink); }
+  nav a.cta { color: var(--brand-ink); background: var(--brand); padding: 8px 16px; border-radius: 6px; }
+
+  .hero { background: var(--brand); color: var(--brand-ink); padding: 96px 0 88px; }
+  .hero .eyebrow { color: #cfe0d9; font-size: .85rem; letter-spacing: .14em; text-transform: uppercase; margin: 0 0 16px; }
+  .hero h1 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: clamp(2.1rem, 4.6vw, 3.4rem); line-height: 1.15; margin: 0 0 20px; max-width: 760px; }
+  .hero p.lead { font-size: 1.15rem; color: #dbe7e2; max-width: 640px; margin: 0 0 32px; }
+  .btn { display: inline-block; padding: 12px 22px; border-radius: 6px; text-decoration: none; font-weight: 600; }
+  .btn.light { background: #fff; color: var(--brand); }
+  .btn.ghost { color: #fff; border: 1px solid rgba(255,255,255,.5); margin-left: 10px; }
+
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--line); }
+  .stat { padding: 28px 24px; border-right: 1px solid var(--line); }
+  .stat:last-child { border-right: 0; }
+  .stat b { display: block; font-family: Georgia, serif; font-weight: 400; font-size: 2rem; color: var(--brand); }
+  .stat span { color: var(--muted); font-size: .92rem; }
+
+  section { padding: 88px 0; }
+  section.alt { background: var(--soft); }
+  .kicker { color: var(--accent); font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; margin: 0 0 10px; }
+  h2 { font-family: Georgia, serif; font-weight: 400; font-size: clamp(1.7rem, 3vw, 2.3rem); line-height: 1.2; margin: 0 0 18px; }
+  .intro { max-width: 680px; color: var(--muted); font-size: 1.06rem; margin: 0 0 44px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 28px; }
+  .card .n { font-family: Georgia, serif; color: var(--accent); font-size: 1.1rem; }
+  .card h3 { font-size: 1.08rem; margin: 8px 0 8px; }
+  .card p { margin: 0; color: var(--muted); font-size: .97rem; }
+
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+  ul.checks { list-style: none; padding: 0; margin: 0; }
+  ul.checks li { padding: 14px 0 14px 34px; border-top: 1px solid var(--line); position: relative; }
+  ul.checks li:last-child { border-bottom: 1px solid var(--line); }
+  ul.checks li::before { content: ""; position: absolute; left: 4px; top: 21px; width: 14px; height: 8px; border-left: 2px solid var(--brand); border-bottom: 2px solid var(--brand); transform: rotate(-45deg); }
+  ul.checks li b { display: block; }
+  ul.checks li span { color: var(--muted); font-size: .95rem; }
+
+  .facts { display: grid; grid-template-columns: 180px 1fr; gap: 0; border-top: 1px solid var(--line); }
+  .facts dt, .facts dd { margin: 0; padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .facts dt { color: var(--muted); font-size: .92rem; }
+
+  .contact { background: var(--brand); color: #fff; }
+  .contact h2 { color: #fff; }
+  .contact p { color: #dbe7e2; }
+  .contact .mail { font-size: 1.35rem; color: #fff; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.4); }
+  .contact .list { margin-top: 28px; color: #dbe7e2; font-size: .97rem; }
+  .contact .list div { padding: 6px 0; }
+
+  footer { padding: 28px 0; color: var(--muted); font-size: .88rem; border-top: 1px solid var(--line); }
+  footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .fine { font-size: .8rem; color: #8a938f; max-width: 720px; }
+
+  .todo { background: #fff3b0; color: #6b5200; padding: 0 4px; border-radius: 3px; }
+
+  @media (max-width: 860px) {
+    nav a:not(.cta) { display: none; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .stat:nth-child(2) { border-right: 0; }
+    .stat:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+    .grid, .two { grid-template-columns: 1fr; gap: 20px; }
+    .facts { grid-template-columns: 1fr; }
+    .facts dt { border-bottom: 0; padding-bottom: 0; }
+    section { padding: 64px 0; }
+    .hero { padding: 72px 0 64px; }
+    .btn.ghost { margin: 12px 0 0; }
+    .wrap { padding: 0 16px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="Minova Group home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#1c4b3f"/><path d="M8 23V9l8 9 8-9v14" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/></svg>
+      MINOVA <small>Group LLC</small>
+    </a>
+    <nav>
+      <a href="#approach">Approach</a>
+      <a href="#quality">Quality</a>
+      <a href="#partners">Partners</a>
+      <a href="#company">Company</a>
+      <a class="cta" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Health &amp; wellness consumer products · United States</p>
+      <h1>Better-specified supplements for the categories customers say are underserved.</h1>
+      <p class="lead">Minova Group LLC develops dietary supplements and personal care products for U.S. consumers and sells them on Amazon.com under the Minova brand. Every product starts from market data and is made by cGMP-registered U.S. manufacturing partners.</p>
+      <a class="btn light" href="#partners">Manufacturing partners</a>
+      <a class="btn ghost" href="#contact">Contact us</a>
+    </div>
+  </div>
+
+  <div class="wrap stats">
+    <div class="stat"><b>13,000+</b><span>Amazon search niches analyzed</span></div>
+    <div class="stat"><b>1,700</b><span>product categories tracked</span></div>
+    <div class="stat"><b>U.S.</b><span>manufacturing partners only</span></div>
+    <div class="stat"><b>Every lot</b><span>third-party tested before sale</span></div>
+  </div>
+
+  <section id="approach">
+    <div class="wrap">
+      <p class="kicker">Approach</p>
+      <h2>Data first, specification second, product third.</h2>
+      <p class="intro">We do not launch products on instinct. We measure demand, competition and customer complaints across the U.S. Amazon marketplace, then build a product that fixes what existing options get wrong.</p>
+      <div class="grid">
+        <div class="card"><div class="n">01</div><h3>Category selection</h3><p>We track search volume, purchases, brand concentration and review barriers for every category and enter only where demand outpaces supply.</p></div>
+        <div class="card"><div class="n">02</div><h3>Specification from reviews</h3><p>We read thousands of customer reviews to define the formula, potency, capsule size and packaging customers actually want.</p></div>
+        <div class="card"><div class="n">03</div><h3>Long-term production</h3><p>We work with one qualified manufacturer per product, with a written specification, a volume forecast and planned reorders.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="quality" class="alt">
+    <div class="wrap two">
+      <div>
+        <p class="kicker">Quality</p>
+        <h2>Our product standards</h2>
+        <p class="intro" style="margin-bottom:0">Dietary supplements are only as good as their verification. These requirements apply to every Minova product and every manufacturing partner.</p>
+      </div>
+      <ul class="checks">
+        <li><b>cGMP manufacturing (21 CFR Part 111)</b><span>FDA-registered facilities with third-party GMP registration such as NSF.</span></li>
+        <li><b>Certificate of Analysis for every lot</b><span>Identity, potency, heavy metals and microbial limits verified by an ISO/IEC 17025 laboratory.</span></li>
+        <li><b>Guaranteed active content</b><span>Label claims stated per serving and confirmed by testing, not by raw-material assumptions.</span></li>
+        <li><b>Marketplace compliance</b><span>Labels follow FDA/DSHEA rules; products complete Amazon's dietary supplement verification before listing.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="partners">
+    <div class="wrap two">
+      <div>
+        <p class="kicker">For manufacturers &amp; suppliers</p>
+        <h2>What working with Minova looks like</h2>
+        <p class="intro" style="margin-bottom:0">We are building a small portfolio of focused products and want partners for the long run. Quote requests from us always include the information you need to price accurately.</p>
+      </div>
+      <ul class="checks">
+        <li><b>A complete specification</b><span>Actives and amount per serving, format, count, packaging and testing requirements.</span></li>
+        <li><b>A volume forecast</b><span>Initial order quantity and expected reorder cadence based on our sales model.</span></li>
+        <li><b>One decision maker</b><span>Direct contact with the founder; questions answered within one business day.</span></li>
+        <li><b>Current focus</b><span>Softgel and capsule supplements, botanical oils, and personal care.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="company" class="alt">
+    <div class="wrap two">
+      <div>
+        <p class="kicker">Company</p>
+        <h2>About Minova Group</h2>
+        <p class="intro">Minova Group LLC is a U.S. company that brings an evidence-driven, data-science approach to consumer health products. We stay small and focused: a few well-specified products, each with one qualified manufacturing partner.</p>
+      </div>
+      <dl class="facts">
+        <dt>Legal name</dt><dd>Minova Group LLC</dd>
+        <dt>Entity</dt><dd>Washington limited liability company</dd>
+        <dt>Brand</dt><dd>Minova</dd>
+        <dt>Sales channel</dt><dd>Amazon.com (United States)</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <p class="kicker" style="color:#cfe0d9">Contact</p>
+      <h2>Let's talk.</h2>
+      <p>Manufacturers, ingredient suppliers and testing laboratories: email us with your capabilities and we will reply within one business day.</p>
+      <a class="mail" href="mailto:minovagroup@gmail.com">minovagroup@gmail.com</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Minova Group LLC. All rights reserved.</span>
+    <span class="fine">These statements have not been evaluated by the Food and Drug Administration. Minova products are not intended to diagnose, treat, cure, or prevent any disease.</span>
+  </div>
+</footer>
+
+</body>
+</html>
